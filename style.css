@@ -1,0 +1,59 @@
+:root {
+    --accent-color: #9747FF;
+    --accent-rgb: 151, 71, 255;
+    --bg-color: #0A0A0A;
+    --surface-color: rgba(18, 18, 18, 0.5);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-color: #E0E0E0;
+    --text-muted: #888888;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    overflow-x: hidden;
+    /* cursor: none; has been removed */
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-color); }
+
+/* --- All custom cursor styles have been removed --- */
+
+#constellation-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+header { position: fixed; top: 0; left: 0; width: 100%; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 100; background: rgba(10, 10, 10, 0.5); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); }
+.logo { font-family: 'Chakra Petch', sans-serif; font-size: 1.5rem; font-weight: 600; }
+nav a { color: var(--text-muted); text-decoration: none; margin: 0 15px; font-weight: 500; transition: color 0.3s ease, text-shadow 0.3s ease; }
+nav a:hover { color: #fff; text-shadow: 0 0 8px var(--accent-color); }
+.content-section { max-width: 1000px; margin: 0 auto; padding: 120px 40px; }
+.section-title { font-family: 'Chakra Petch', sans-serif; font-size: 2.5rem; font-weight: 600; color: #fff; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 3px; text-align: center; }
+.section-title span { display: inline-block; opacity: 0; transform: translateY(20px) scale(1.1); filter: blur(5px); transition: all 0.5s; }
+#hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.hero-title { font-family: 'Chakra Petch', sans-serif; font-size: clamp(2.5rem, 10vw, 6rem); font-weight: 600; letter-spacing: 0.1em; }
+.hero-title span { display: inline-block; opacity: 0; transform: translateY(-50px); transition: all 0.5s; }
+.hero-subtitle { font-size: clamp(1rem, 4vw, 1.2rem); letter-spacing: 5px; text-transform: uppercase; margin-top: 10px; color: var(--text-muted); opacity: 0; animation: fade-in 1s 1s forwards; }
+@keyframes fade-in { to { opacity: 1; } }
+.skills-grid, .projects-grid { display: grid; gap: 25px; }
+.skills-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.projects-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); text-align: left; }
+.skill-card, .project-card { background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 8px; transition: all 0.3s ease; }
+.skill-card { padding: 30px; text-align: center; font-weight: 600; }
+.skill-card:hover, .project-card:hover { transform: translateY(-5px); border-color: var(--accent-color); box-shadow: 0 0 25px -10px var(--accent-color); }
+.project-card { overflow: hidden; }
+.project-card img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
+.project-card h3 { font-size: 1.5rem; color: #fff; margin: 20px 25px 10px; }
+.project-card p { margin: 0 25px 20px; font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); }
+.tags { margin: 0 25px 20px; }
+.tag { background: rgba(var(--accent-rgb), 0.15); color: var(--accent-color); padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; font-weight: 600; margin-right: 10px; }
+.project-links { display: flex; gap: 15px; padding: 0 25px 25px; }
+.btn { position: relative; display: inline-block; background: transparent; color: #fff; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: 600; font-family: 'Chakra Petch', sans-serif; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--text-muted); overflow: hidden; transition: all 0.4s ease; }
+.btn::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--accent-color); transform: translateY(100%); transition: transform 0.4s ease; z-index: -1; }
+.btn:hover { color: #fff; border-color: var(--accent-color); transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(var(--accent-rgb), 0.3); }
+.btn:hover::before { transform: translateY(0); }
+.btn-large { font-size: 1.1rem; padding: 15px 30px; }
+#contact { text-align: center; }
+.contact-subtitle { max-width: 500px; margin: 0 auto 40px; color: var(--text-muted); }
+footer { text-align: center; padding: 40px; color: #444; font-size: 0.9rem; }

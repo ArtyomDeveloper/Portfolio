@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artyom Dev - Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- The custom cursor div has been completely removed from here -->
+
+    <canvas id="constellation-canvas"></canvas>
+
+    <header>
+        <div class="logo">A/D</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1 class="hero-title"><span>A</span><span>r</span><span>t</span><span>y</span><span>o</span><span>m</span><span> </span><span>D</span><span>e</span><span>v</span></h1>
+            <p class="hero-subtitle">Frontend Web Developer</p>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2 class="section-title"><span>S</span><span>y</span><span>s</span><span>t</span><span>e</span><span>m</span><span> </span><span>P</span><span>r</span><span>o</span><span>f</span><span>i</span><span>l</span><span>e</span></h2>
+            <p>A frontend developer driven to build intuitive, performant, and visually engaging web applications. I specialize in turning creative concepts into seamless, user-centric digital experiences using a modern tech stack.</p>
+        </section>
+
+        <section id="skills" class="content-section">
+            <h2 class="section-title"><span>T</span><span>e</span><span>c</span><span>h</span><span> </span><span>S</span><span>t</span><span>a</span><span>c</span><span>k</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">JavaScript (ES6+)</div>
+                <div class="skill-card">HTML & CSS</div>
+                <div class="skill-card">React</div>
+                <div class="skill-card">Node.js</div>
+                <div class="skill-card">Three.js</div>
+                <div class="skill-card">GSAP</div>
+                <div class="skill-card">Git & GitHub</div>
+                <div class="skill-card">Figma</div>
+            </div>
+        </section>
+        
+        <section id="projects" class="content-section">
+            <h2 class="section-title"><span>F</span><span>e</span><span>a</span><span>t</span><span>u</span><span>r</span><span>e</span><span>d</span><span> </span><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h2>
+            <div class="projects-grid"><div class="project-card"><img src="assets/images/project1.jpg" alt="3D Shape Viewer Project"><h3>Interactive 3D Viewer</h3><p>A performant 3D model viewer with a dynamic UI, audio-reactive visualizer, and custom asset loading. Built with Three.js and GSAP.</p><div class="tags"><span class="tag">Three.js</span><span class="tag">GSAP</span><span class="tag">JavaScript</span></div><div class="project-links"><a href="https://artyomdeveloper.github.io/3D-Shape-Viewer/" target="_blank" rel="noopener noreferrer" class="btn">Live Demo</a></div></div><div class="project-card"><img src="assets/images/project2.jpg" alt="Project 2 Screenshot"><h3>Data Visualization Dashboard</h3><p>An enterprise-level dashboard for visualizing complex data sets, featuring custom charts, filters, and real-time updates.</p><div class="tags"><span class="tag">React</span><span class="tag">D3.js</span><span class="tag">API</span></div><div class="project-links"><a href="#" class="btn">Live Demo</a></div></div></div>
+        </section>
+        <section id="contact" class="content-section">
+            <h2 class="section-title"><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span><span> </span><span>C</span><span>h</span><span>a</span><span>n</span><span>n</span><span>e</span><span>l</span></h2>
+            <p class="contact-subtitle">I'm currently available for freelance work and open to new opportunities. Let's build something amazing together.</p><a href="mailto:contact@artyom.dev" class="btn btn-large">contact@artyom.dev</a>
+        </section>
+    </main>
+
+    <footer><p>© 2024 Artyom Dev. All rights reserved.</p></footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
